@@ -373,7 +373,7 @@ MIT License - See LICENSE file for details
 
 For issues and questions:
 - Create an issue on GitHub
-- Contact: your-email@example.com
+- Contact: siddhantgupta0022@gmail.com
 
 ## Contributing
 
