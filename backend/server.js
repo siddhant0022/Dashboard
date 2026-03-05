@@ -126,6 +126,7 @@ app.post('/api/watches/register', (req, res) => {
     logger.error('Error registering watch:', error);
     res.status(500).json({
       success: false,
+      
       error: error.message
     });
   }

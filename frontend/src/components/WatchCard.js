@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Heart, Activity, Droplet, Wind, Thermometer, 
-  Battery, Wifi, WifiOff, AlertTriangle, TrendingUp, TrendingDown
+  Battery, Wifi, WifiOff, AlertTriangle, TrendingUp
 } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import './WatchCard.css';
