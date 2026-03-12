@@ -11,7 +11,7 @@ const logger = require('./services/logger');
 const StealtheraAPIClient = require('./services/stealthera-api');
 const DataManager = require('./services/data-manager');
 
-const pbRoutes = require('./routes/pbRoutes')
+const watchRoutes = require('./routes/watchRoutes')
 
 // Initialize Express app
 const app = express();
@@ -43,7 +43,7 @@ app.use(express.raw({
   limit: "10mb"
 }))
 
-app.use("/pb", pbRoutes)
+app.use("/pb", watchRoutes)
 
 // Rate limiting
 const limiter = rateLimit({
