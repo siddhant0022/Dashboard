@@ -11,6 +11,8 @@ const logger = require('./services/logger');
 const StealtheraAPIClient = require('./services/stealthera-api');
 const DataManager = require('./services/data-manager');
 
+const pbRoutes = require('./routes/pbRoutes')
+
 // Initialize Express app
 const app = express();
 const server = http.createServer(app);
@@ -35,6 +37,13 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.raw({
+  type: "*/*",
+  limit: "10mb"
+}))
+
+app.use("/pb", pbRoutes)
 
 // Rate limiting
 const limiter = rateLimit({
